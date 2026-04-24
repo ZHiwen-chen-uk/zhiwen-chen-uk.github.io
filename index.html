@@ -1,1 +1,325 @@
-111
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zhiwen Chen — MSc Health Data Science @ UCL · ML / NLP / Health Data</title>
+<meta name="description" content="Zhiwen Chen — MSc Health Data Science student at UCL with a BSc in Computer Science from Birmingham. Looking for early-career UK roles in AI, ML, NLP and health data.">
+<meta name="author" content="Zhiwen Chen">
+<style>
+  :root {
+    --navy: #2F5D80;
+    --navy-light: #4a90b8;
+    --text: #1a1a1a;
+    --muted: #555;
+    --bg: #fafafa;
+    --card: #ffffff;
+    --border: #e1e4e8;
+    --code-bg: #f3f5f7;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  header.hero {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 28px;
+    margin-bottom: 36px;
+  }
+  h1 {
+    font-size: 32px;
+    margin: 0 0 8px;
+    color: var(--text);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  .tagline {
+    font-size: 17px;
+    color: var(--muted);
+    margin: 0 0 16px;
+  }
+  .meta {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 14px;
+  }
+  .links a {
+    color: var(--navy);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+  .links a:hover { border-bottom-color: var(--navy); }
+  h2 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--navy);
+    margin: 40px 0 16px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 4px;
+    color: var(--text);
+  }
+  .featured {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--navy);
+    border-radius: 4px;
+    padding: 22px 24px;
+    margin-bottom: 16px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--navy);
+    background: rgba(47, 93, 128, 0.08);
+    padding: 3px 9px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  .project {
+    margin-bottom: 26px;
+    padding-left: 14px;
+    border-left: 2px solid var(--border);
+  }
+  .project-meta {
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+    margin: 4px 0 8px;
+  }
+  ul {
+    margin: 8px 0 0;
+    padding-left: 20px;
+  }
+  li {
+    margin: 4px 0;
+    font-size: 15px;
+  }
+  code, .tech {
+    font-family: "SF Mono", Menlo, Monaco, Consolas, monospace;
+    font-size: 13px;
+    background: var(--code-bg);
+    padding: 1px 6px;
+    border-radius: 3px;
+    color: #2a4a66;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 13px;
+  }
+  th, td {
+    padding: 6px 8px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  th {
+    background: var(--code-bg);
+    font-weight: 600;
+    color: var(--muted);
+  }
+  td.win { color: var(--navy); font-weight: 600; }
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin-top: 8px;
+  }
+  .skill-group h4 {
+    margin: 0 0 6px;
+    font-size: 13px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    font-weight: 600;
+  }
+  .skill-list {
+    font-size: 14px;
+    color: var(--text);
+  }
+  .education-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  .education-row .when {
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+    white-space: nowrap;
+    margin-left: 12px;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center;
+  }
+  @media (max-width: 520px) {
+    .wrap { padding: 32px 18px 64px; }
+    h1 { font-size: 26px; }
+    .tagline { font-size: 15px; }
+    .education-row { flex-direction: column; align-items: flex-start; }
+    .education-row .when { margin-left: 0; margin-top: 2px; }
+  }
+  @media print {
+    body { background: white; }
+    .wrap { max-width: 100%; padding: 0; }
+    .featured { border-left-width: 2px; page-break-inside: avoid; }
+    a { color: var(--text); text-decoration: underline; }
+    h2 { page-break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>Zhiwen Chen</h1>
+    <p class="tagline">MSc Health Data Science @ UCL · BSc Computer Science @ Birmingham (2:1) · Targeting UK early-career roles in AI, ML, NLP and Health Data.</p>
+    <p class="meta">London, United Kingdom</p>
+    <nav class="links">
+      <a href="mailto:zhiwen.c7777@gmail.com">zhiwen.c7777@gmail.com</a>
+      <a href="https://www.linkedin.com/in/zhiwen-chen-49a834397/" rel="me">LinkedIn</a>
+      <a href="https://github.com/zhiwen-chen-uk" rel="me">GitHub</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p>I am finishing an MSc in Health Data Science at UCL after a BSc in Computer Science at Birmingham (2:1, Jun 2025). My work sits at the intersection of <strong>machine learning, natural language processing, and healthcare data</strong> — from ontology-aware clinical entity linking with SNOMED CT, to a novel three-phase evolutionary algorithm for multi-objective Neural Architecture Search.</p>
+    <p>I am looking for an internship, graduate, or junior role in the UK where I can apply ML and NLP to real problems — particularly in healthcare, digital health, and applied AI.</p>
+  </section>
+
+  <section>
+    <h2>Featured Project</h2>
+    <div class="featured">
+      <span class="badge">BSc Dissertation · Sep 2024 – May 2025</span>
+      <h3>SENAS: A Cyclical Three-Phase Evolutionary Algorithm for Multi-Objective Neural Architecture Search</h3>
+      <p class="project-meta">University of Birmingham · Supervisor Dr. Jizheng Wan · Inspector Prof. Russell Beale · Topic introduced by Dr. Miqing Li</p>
+      <p>SENAS is a cyclic three-phase evolutionary NAS algorithm: <strong>SOM-guided diversity exploration</strong>, <strong>dual-archive convergence–diversity co-evolution</strong>, and <strong>ε+-indicator-guided refinement</strong>. A lightweight <strong>Monte-Carlo hypervolume estimator</strong> handles phase transitions without computing exact HV.</p>
+      <p>Benchmarked against NSGA-II, MOEA/D, HypE, RVEA and a SOM-SEMO baseline on the C10/MOP suite (NAS-Bench-101 / 201, NATS-Bench, DARTS), 30 independent runs per task, fixed budget of 10,000 architecture queries.</p>
+      <table>
+        <thead>
+          <tr><th>Task</th><th>SENAS</th><th>NSGA-II</th><th>MOEA/D</th><th>HypE</th><th>RVEA</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>C10/MOP1</td><td class="win">0.9368 ✓</td><td>0.9156</td><td>0.8965</td><td>0.8060</td><td>0.9158</td></tr>
+          <tr><td>C10/MOP2</td><td class="win">0.9174 ✓</td><td>0.8987</td><td>0.8714</td><td>0.7714</td><td>0.8903</td></tr>
+          <tr><td>C10/MOP3</td><td class="win">0.8260 ✓</td><td>0.8054</td><td>0.7883</td><td>0.7924</td><td>0.8013</td></tr>
+          <tr><td>C10/MOP4</td><td class="win">0.7568 ✓</td><td>0.7452</td><td>0.7231</td><td>0.7483</td><td>0.7419</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:13px;color:var(--muted);margin-top:12px;"><strong>Result:</strong> SENAS wins on 6 of 9 C10/MOP benchmarks. Honest limitation: SENAS underperforms on the DARTS-based MOP8–9, where the continuous architecture space penalises discrete BMU-based perturbation.</p>
+      <p style="font-size:13px;color:var(--muted);margin-top:6px;"><strong>Stack:</strong> <code>Python</code> · <code>PyTorch</code> · <code>EvoXBench</code></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Selected Work</h2>
+
+    <div class="project">
+      <h3>Ontology-aware Clinical Entity Linking with SNOMED CT</h3>
+      <p class="project-meta">UCL MSc research · Ongoing</p>
+      <ul>
+        <li>Two-stage entity linking framework for clinical text: candidate generation followed by hierarchy-informed reranking.</li>
+        <li>Reranker combines semantic similarity with SNOMED CT structural signals — hierarchy distance, shared ancestors, structural consistency.</li>
+        <li>Evaluating disambiguation accuracy against a non-hierarchical baseline.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>Heart Failure Prediction from Clinical Features</h3>
+      <p class="project-meta">UCL MSc coursework · 2026</p>
+      <ul>
+        <li>End-to-end ML workflow on structured clinical variables, with EDA, missingness review, and comparative feature visualisation.</li>
+        <li>Compared classifiers using ROC-AUC, precision, recall, and F1-score, prioritising clinically interpretable feature importance.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>NLP Algorithm Intern — Shanghai Zhiyu Information Technology</h3>
+      <p class="project-meta">Beijing, Jun 2025 – Sep 2025</p>
+      <ul>
+        <li>Built an OCR + NLP pipeline for automated identification of <strong>lending-related clauses</strong> in scanned corporate charter documents.</li>
+        <li>Designed page-level pre-processing (text extraction, region localisation, document cleaning) and iterated on model + data refinement.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill-group">
+        <h4>Languages</h4>
+        <div class="skill-list">Python · R · SQL · Java · JavaScript · C · Haskell</div>
+      </div>
+      <div class="skill-group">
+        <h4>ML / NLP</h4>
+        <div class="skill-list">PyTorch · Hugging Face Transformers · PaddleNLP · Information Extraction · Multi-objective Optimisation · Neural Architecture Search</div>
+      </div>
+      <div class="skill-group">
+        <h4>Data &amp; Genomics</h4>
+        <div class="skill-list">EDA · Statistical evaluation · Benchmarking · PLINK · GWAS · Variant QC</div>
+      </div>
+      <div class="skill-group">
+        <h4>Tools</h4>
+        <div class="skill-list">Git / GitHub · Linux / Unix · OCR tooling · LaTeX</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="education-row">
+      <span><strong>University College London</strong> — MSc Health Data Science</span>
+      <span class="when">Sep 2025 – Sep 2026 (expected)</span>
+    </div>
+    <p style="margin: 4px 0 16px; font-size: 14px; color: var(--muted);">AI in Healthcare · Advanced Methods in Data Science and Statistics · Principles of Health Data Science · Applied Computational Genomics · Epidemiology for Data Science · Programming with Python for Health Research.</p>
+
+    <div class="education-row">
+      <span><strong>University of Birmingham</strong> — BSc Computer Science · 2:1</span>
+      <span class="when">Sep 2021 – Jun 2025</span>
+    </div>
+    <p style="margin: 4px 0 0; font-size: 14px; color: var(--muted);">Artificial Intelligence · Natural Language Processing · Evolutionary Computation · Data Structures and Algorithms · Operating Systems · Software Engineering · Mathematics and Logic Foundations.</p>
+  </section>
+
+  <footer>
+    Built with hand-written HTML &amp; CSS · Last updated April 2026
+  </footer>
+
+</div>
+</body>
+</html>
